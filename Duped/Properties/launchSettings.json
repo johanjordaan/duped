@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Duped": {
+      "commandName": "Project",
+      "commandLineArgs": "z:\\"
+    }
+  }
+}
