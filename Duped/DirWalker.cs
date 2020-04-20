@@ -10,14 +10,14 @@ namespace Duped
         public class Result
         {
             public String Root { private set; get; }
-            public List<System.IO.FileInfo> Files { private set; get; }
+            public List<Duped.FileInfoWrapper> Files { private set; get; }
 
             public long TimeTakenMs { set; get; }
 
             public Result(String root)
             {
                 Root = root;
-                Files = new List<System.IO.FileInfo>();
+                Files = new List<Duped.FileInfoWrapper>();
             }
         }
 
@@ -95,7 +95,7 @@ namespace Duped
                         count++;
                         // Perform whatever action is required in your scenario.
                         System.IO.FileInfo fi = new System.IO.FileInfo(file);
-                        result.Files.Add(fi);
+                        result.Files.Add(new Duped.FileInfoWrapper(new System.IO.FileInfo(root).FullName,fi));
                         //Console.WriteLine("{0}: {1}, {2}", fi.Name, fi.Length, fi.CreationTime);
                         try
                         {
