@@ -41,6 +41,8 @@ namespace Duped
             }
         }
 
+
+
         public static FileAnalyser.Result Run(List<Duped.FileInfoWrapper> files)
         {
             var watch = new System.Diagnostics.Stopwatch();

@@ -1,4 +1,6 @@
 using NUnit.Framework;
+using System;
+using System.IO;
 
 namespace DupedTests
 {
@@ -7,6 +9,7 @@ namespace DupedTests
         [SetUp]
         public void Setup()
         {
+            Directory.SetCurrentDirectory(AppDomain.CurrentDomain.BaseDirectory);
         }
 
         [Test]
