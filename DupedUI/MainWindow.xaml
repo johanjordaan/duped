@@ -7,26 +7,29 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TabControl>
-            <TabItem Header="TabItem">
+        <TabControl Height="419" VerticalAlignment="Top">
+            <TabItem Header="Find">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="26*"/>
                         <ColumnDefinition Width="61*"/>
                         <ColumnDefinition Width="707*"/>
                     </Grid.ColumnDefinitions>
-                    <Button x:Name="TargetBtn" Content="Button" HorizontalAlignment="Left" Margin="2,83,0,0" VerticalAlignment="Top" Click="Button_Click" Grid.ColumnSpan="2"/>
-                    <Label x:Name="SelectedPath" Content="Label" HorizontalAlignment="Left" Margin="44,80,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2"/>
-                    <Label x:Name="Status" Content="Label" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top" Width="780" Grid.ColumnSpan="3"/>
-                    <Label x:Name="Count" Content="Label" HorizontalAlignment="Left" Margin="10,173,0,0" VerticalAlignment="Top" Width="780" Grid.ColumnSpan="3"/>
+                    <Button x:Name="AddTargetBtn" Content="+" HorizontalAlignment="Left" Margin="14,10,0,0" VerticalAlignment="Top" Click="Button_Click" RenderTransformOrigin="3,0.5"/>
+                    <Label x:Name="SelectedPathLbl" Content="Label" HorizontalAlignment="Right" Margin="0,7,10,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Width="740"/>
+                    <Label x:Name="StatusLbl" Content="Label" HorizontalAlignment="Left" Margin="14,114,-8,0" VerticalAlignment="Top" Width="780" Grid.ColumnSpan="3"/>
+                    <Label x:Name="CountLbl" Content="Label" HorizontalAlignment="Left" Margin="14,145,-8,0" VerticalAlignment="Top" Width="780" Grid.ColumnSpan="3"/>
+                    <Button x:Name="StartBtn" Grid.ColumnSpan="2" Content="Start" Grid.Column="1" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Width="75" Click="StartBtn_Click"/>
+                    <Button x:Name="CancelBtn" Content="Cancel" Grid.Column="2" HorizontalAlignment="Left" Margin="37,45,0,0" VerticalAlignment="Top" Width="75" Click="CancelBtn_Click" IsEnabled="False"/>
+                    <local:StatusGraph x:Name="Status" HorizontalAlignment="Left" Height="188" Margin="10,193,0,0" VerticalAlignment="Top" Width="766" Grid.ColumnSpan="3"/>
                 </Grid>
             </TabItem>
             <TabItem Header="TabItem">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="8*"/>
-                        <ColumnDefinition Width="7*"/>
-                        <ColumnDefinition Width="382*"/>
+                        <ColumnDefinition Width="16"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="54*"/>
                     </Grid.ColumnDefinitions>
                 </Grid>
             </TabItem>
